@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,9 +11,85 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Chatview">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.95590394300000003" green="0.053603989859999999" blue="0.92705413540000003" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lsj-d2-JNO">
+                    <rect key="frame" x="0.0" y="65" width="320" height="373"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-ba-l3Y">
+                    <rect key="frame" x="0.0" y="438" width="320" height="42"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2o-oV-hKt">
+                            <rect key="frame" x="10" y="4" width="257" height="34"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-mB-BhU">
+                                    <rect key="frame" x="7" y="2" width="242" height="30"/>
+                                    <color key="backgroundColor" red="0.062745098040000002" green="0.019607843140000001" blue="0.08235294118" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ntC-mB-BhU" secondAttribute="trailing" constant="8" id="0Wg-Yd-UpF"/>
+                                <constraint firstAttribute="bottom" secondItem="ntC-mB-BhU" secondAttribute="bottom" constant="2" id="CjL-SH-MBA"/>
+                                <constraint firstItem="ntC-mB-BhU" firstAttribute="leading" secondItem="t2o-oV-hKt" secondAttribute="leading" constant="7" id="ZaK-vM-I5c"/>
+                                <constraint firstItem="ntC-mB-BhU" firstAttribute="centerY" secondItem="t2o-oV-hKt" secondAttribute="centerY" id="lR7-hY-bmZ"/>
+                                <constraint firstItem="ntC-mB-BhU" firstAttribute="top" secondItem="t2o-oV-hKt" secondAttribute="top" constant="2" id="zhh-jR-zJ9"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdV-fc-WWb">
+                            <rect key="frame" x="273" y="6" width="40" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="I9X-ed-GZd"/>
+                                <constraint firstAttribute="height" constant="30" id="yQR-l2-0sZ"/>
+                            </constraints>
+                            <state key="normal" image="add_comment.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.08235294118" green="0.047058823530000002" blue="0.094117647060000004" alpha="0.97999999999999998" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="PdV-fc-WWb" secondAttribute="trailing" constant="7" id="52l-Lv-fUg"/>
+                        <constraint firstItem="t2o-oV-hKt" firstAttribute="centerX" secondItem="bbc-ba-l3Y" secondAttribute="centerX" constant="-22" id="Frh-CK-FAz"/>
+                        <constraint firstItem="t2o-oV-hKt" firstAttribute="top" secondItem="bbc-ba-l3Y" secondAttribute="top" constant="4" id="Hep-bJ-sf1"/>
+                        <constraint firstItem="PdV-fc-WWb" firstAttribute="centerY" secondItem="bbc-ba-l3Y" secondAttribute="centerY" id="VpQ-6p-rsl"/>
+                        <constraint firstItem="t2o-oV-hKt" firstAttribute="width" secondItem="bbc-ba-l3Y" secondAttribute="width" multiplier="0.805" id="fff-Im-KNg"/>
+                        <constraint firstAttribute="height" constant="42" id="pQi-5t-vaF"/>
+                        <constraint firstAttribute="bottom" secondItem="t2o-oV-hKt" secondAttribute="bottom" constant="4" id="qX8-Pt-gpE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bbc-ba-l3Y" firstAttribute="top" secondItem="lsj-d2-JNO" secondAttribute="bottom" id="7Ue-aX-VDz"/>
+                <constraint firstItem="bbc-ba-l3Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9fQ-Sx-iUp"/>
+                <constraint firstAttribute="trailing" secondItem="bbc-ba-l3Y" secondAttribute="trailing" id="HrW-7a-aOg"/>
+                <constraint firstItem="bbc-ba-l3Y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PFf-xK-yGa"/>
+                <constraint firstItem="lsj-d2-JNO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="65" id="V3I-li-lWI">
+                    <variation key="heightClass=regular-widthClass=regular" constant="85"/>
+                </constraint>
+                <constraint firstItem="lsj-d2-JNO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fy1-38-rfw"/>
+                <constraint firstAttribute="bottom" secondItem="bbc-ba-l3Y" secondAttribute="bottom" id="g3p-Op-InQ"/>
+                <constraint firstItem="lsj-d2-JNO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="h2O-3A-6Vq"/>
+                <constraint firstAttribute="trailing" secondItem="lsj-d2-JNO" secondAttribute="trailing" id="zbx-MU-rYy"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cmntText" destination="ntC-mB-BhU" id="R0D-hd-mRk"/>
+                <outlet property="cmtBtn" destination="PdV-fc-WWb" id="NDZ-OJ-I59"/>
+                <outlet property="tbl_chatview" destination="lsj-d2-JNO" id="ljz-cc-Mev"/>
+                <outlet property="tbl_constraints_bottom" destination="7Ue-aX-VDz" id="jJE-sk-6Mo"/>
+                <outlet property="txtViewComnt" destination="t2o-oV-hKt" id="9U2-oR-UAH"/>
+                <outlet property="viewCmmentBox" destination="bbc-ba-l3Y" id="Oif-UT-9vx"/>
+            </connections>
             <point key="canvasLocation" x="267" y="177"/>
         </view>
     </objects>
+    <resources>
+        <image name="add_comment.png" width="30" height="30"/>
+    </resources>
 </document>

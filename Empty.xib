@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WaterfallCell" id="iHo-Rc-fPj" customClass="FRGWaterfallCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="155" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="155" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DrD-17-Vsm">
+                        <rect key="frame" x="0.0" y="0.0" width="155" height="145"/>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1qg-Dh-xEL">
+                        <rect key="frame" x="68" y="63" width="20" height="20"/>
+                    </activityIndicatorView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjX-kN-sOI">
+                        <rect key="frame" x="0.0" y="122" width="155" height="24"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ON1-o9-dMg">
+                                <rect key="frame" x="3" y="0.0" width="36" height="24"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" tag="31" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="like.png" translatesAutoresizingMaskIntoConstraints="NO" id="b3x-o7-6IS">
+                                        <rect key="frame" x="0.0" y="7" width="10" height="10"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-O5-tx3">
+                                        <rect key="frame" x="10" y="1" width="26" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PlP-cg-pqJ">
+                                <rect key="frame" x="59" y="0.0" width="36" height="24"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" tag="32" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dislike.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Yi-oj-4kX">
+                                        <rect key="frame" x="0.0" y="7" width="10" height="10"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQs-Px-U99">
+                                        <rect key="frame" x="10" y="1" width="26" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oad-8L-87t">
+                                <rect key="frame" x="119" y="0.0" width="36" height="24"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" tag="60" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="comments.png" translatesAutoresizingMaskIntoConstraints="NO" id="MMJ-EB-ggR">
+                                        <rect key="frame" x="1" y="7" width="10" height="10"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lD-i9-a7e">
+                                        <rect key="frame" x="10" y="1" width="26" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="MqI-qq-TUg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1qg-Dh-xEL" firstAttribute="centerY" secondItem="iHo-Rc-fPj" secondAttribute="centerY" id="8OF-yc-rY0"/>
+                <constraint firstItem="DrD-17-Vsm" firstAttribute="top" secondItem="iHo-Rc-fPj" secondAttribute="top" id="FbX-8e-VVw"/>
+                <constraint firstItem="1qg-Dh-xEL" firstAttribute="centerX" secondItem="iHo-Rc-fPj" secondAttribute="centerX" id="HnT-mM-bdj"/>
+                <constraint firstAttribute="trailing" secondItem="cjX-kN-sOI" secondAttribute="trailing" id="LPf-Db-Grr"/>
+                <constraint firstAttribute="trailing" secondItem="DrD-17-Vsm" secondAttribute="trailing" id="UuO-oY-BjU"/>
+                <constraint firstAttribute="bottom" secondItem="DrD-17-Vsm" secondAttribute="bottom" id="itg-Kd-hxF"/>
+                <constraint firstItem="DrD-17-Vsm" firstAttribute="leading" secondItem="iHo-Rc-fPj" secondAttribute="leading" id="jx0-O4-3VA"/>
+                <constraint firstAttribute="bottom" secondItem="cjX-kN-sOI" secondAttribute="bottom" constant="-1" id="pRB-jY-aiK"/>
+                <constraint firstItem="cjX-kN-sOI" firstAttribute="leading" secondItem="iHo-Rc-fPj" secondAttribute="leading" id="wNt-2m-D1n"/>
+            </constraints>
+            <connections>
+                <outlet property="imgCommentimg" destination="MMJ-EB-ggR" id="iSn-r8-ElS"/>
+                <outlet property="imgDislikeimg" destination="8Yi-oj-4kX" id="SMo-qP-0sd"/>
+                <outlet property="imgLikeimg" destination="b3x-o7-6IS" id="4gm-52-xMc"/>
+                <outlet property="indicator" destination="1qg-Dh-xEL" id="TyV-xv-Fdw"/>
+                <outlet property="lblComment" destination="5lD-i9-a7e" id="fgf-g1-u9N"/>
+                <outlet property="lblDislike" destination="aQs-Px-U99" id="yJP-zI-IrH"/>
+                <outlet property="lblImageView" destination="DrD-17-Vsm" id="R2y-gF-Sjm"/>
+                <outlet property="lblLike" destination="wHt-O5-tx3" id="1c7-N2-Nbe"/>
+                <outlet property="viewImgBox" destination="cjX-kN-sOI" id="Enp-nr-hUj"/>
+            </connections>
+            <point key="canvasLocation" x="156.5" y="164.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="comments.png" width="10" height="9"/>
+        <image name="dislike.png" width="35" height="32"/>
+        <image name="like.png" width="35" height="32"/>
+    </resources>
+</document>

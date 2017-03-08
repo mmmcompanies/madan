@@ -1,11 +1,12 @@
 //
-//  ChatViewController.h
+//  AddfriendController.h
 //  Looks Guru
 //
-//  Created by Techno Softwares on 22/02/17.
+//  Created by Techno Softwares on 01/03/17.
 //  Copyright © 2017 Techno Softwares. All rights reserved.
 //
 
+#import "LGHeaderViewController.h"
 #import "LGHeaderViewController.h"
 #import <UIKit/UIKit.h>
 #import "CommonFunctions.h"
@@ -24,30 +25,21 @@
 #import "MosaicLayout.h"
 #import "MosaicData.h"
 #import "CustomDataSource.h"
-#import "Chatview.h"
 
-@interface ChatViewController : LGHeaderViewController<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate,UISearchBarDelegate,UITextFieldDelegate>
+#define kColumnsiPadLandscape 5
+#define kColumnsiPadPortrait 4
+#define kColumnsiPhoneLandscape 3
+#define kColumnsiPhonePortrait 2
+#define kDoubleColumnProbability 40
+
+@interface AddfriendController : LGHeaderViewController<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 {
-    NSArray *itemArray;
-    NSArray *imgArray;
-    Chatview *Subview;
-    NSIndexPath *set_indexpath;
-    CGRect swipedCellframe;
-    CGRect chatViewframe;
-    CGPoint location;
-    IBOutlet UIButton *btn_addfriend;
-    NSString *strFriendID;
-    
-    UIActivityIndicatorView *loding;
-    
+    NSMutableArray *Fullnamearr;
+    NSMutableArray *ImageArr;
+    NSMutableArray *contactsArray;
+    NSMutableArray *NumberArry;
     NSMutableArray *searchresult;
     
-    NSArray *arrChat;
-    float  txtViewWidth;
-    NSMutableArray *arrtxtViewWidth;
-//    NSMutableArray *arrmessage;
-//    NSMutableArray *arrsenderID;
-//     NSMutableArray *conversionID;
     
     NSMutableArray *arrPosts;
     NSInteger count;
@@ -56,13 +48,11 @@
     BOOL stopDownload;
     MBProgressHUD *HUD;
     LGPostData *selectedPost;
-    LGPostData *ChatData;
     int downloadCOunter;
     NSString *totalPostCount;
-
    
-}
-@property (strong, nonatomic) IBOutlet UITableView *tbl_chatlist;
- @property (nonatomic, strong) NSMutableDictionary *imageDownloadsInProgress;
 
+}
+@property (strong, nonatomic) IBOutlet UITableView *tbl_listUser;
+ @property (nonatomic, strong) NSMutableDictionary *imageDownloadsInProgress;
 @end

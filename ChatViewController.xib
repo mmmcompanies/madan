@@ -3,10 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController">
             <connections>
+                <outlet property="btn_addfriend" destination="sSU-Nh-3rb" id="sgM-Y5-mAc"/>
                 <outlet property="tbl_chatlist" destination="oIv-Yo-q4Y" id="47H-yz-7Fe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,21 +18,60 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oIv-Yo-q4Y">
-                    <rect key="frame" x="0.0" y="65" width="320" height="415"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="eDF-Mb-V79">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oIv-Yo-q4Y">
+                    <rect key="frame" x="0.0" y="65" width="320" height="373"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGC-ym-2TI">
+                    <rect key="frame" x="0.0" y="438" width="320" height="42"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-Nh-3rb">
+                            <rect key="frame" x="85" y="7" width="150" height="28"/>
+                            <state key="normal" title="Add Friend">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btn_addfriend_clicked:" destination="-1" eventType="touchUpInside" id="cJ2-kB-8I3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.08235294118" green="0.047058823530000002" blue="0.094117647060000004" alpha="0.97999999999999998" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="sSU-Nh-3rb" firstAttribute="width" secondItem="TGC-ym-2TI" secondAttribute="width" multiplier="0.47" id="2dR-f3-1SZ"/>
+                        <constraint firstItem="sSU-Nh-3rb" firstAttribute="centerX" secondItem="TGC-ym-2TI" secondAttribute="centerX" id="7Uo-AV-HhE"/>
+                        <constraint firstAttribute="height" constant="42" id="Nac-By-jss"/>
+                        <constraint firstItem="sSU-Nh-3rb" firstAttribute="centerY" secondItem="TGC-ym-2TI" secondAttribute="centerY" id="Rke-7l-lsp"/>
+                        <constraint firstItem="sSU-Nh-3rb" firstAttribute="top" secondItem="TGC-ym-2TI" secondAttribute="top" constant="7" id="VBL-Dz-BSG"/>
+                        <constraint firstAttribute="bottom" secondItem="sSU-Nh-3rb" secondAttribute="bottom" constant="7" id="eDK-je-Dye"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.80000000000000004" green="0.23137254900000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="eDF-Mb-V79" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="76e-Qw-Qyf"/>
+                <constraint firstItem="TGC-ym-2TI" firstAttribute="top" secondItem="oIv-Yo-q4Y" secondAttribute="bottom" id="Auz-QY-5hp"/>
+                <constraint firstAttribute="trailing" secondItem="eDF-Mb-V79" secondAttribute="trailing" id="ETT-4X-frW"/>
                 <constraint firstAttribute="trailing" secondItem="oIv-Yo-q4Y" secondAttribute="trailing" id="Gy5-WV-V6L"/>
-                <constraint firstItem="oIv-Yo-q4Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="POZ-wh-wFm"/>
-                <constraint firstAttribute="bottom" secondItem="oIv-Yo-q4Y" secondAttribute="bottom" id="TCM-dy-IeO"/>
-                <constraint firstItem="oIv-Yo-q4Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bli-pd-2Jg"/>
+                <constraint firstAttribute="bottom" secondItem="TGC-ym-2TI" secondAttribute="bottom" id="JdY-3h-wLo"/>
+                <constraint firstAttribute="trailing" secondItem="TGC-ym-2TI" secondAttribute="trailing" id="JxR-f0-hvV"/>
+                <constraint firstItem="oIv-Yo-q4Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="POZ-wh-wFm">
+                    <variation key="heightClass=regular-widthClass=regular" constant="85"/>
+                </constraint>
+                <constraint firstItem="TGC-ym-2TI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rag-iL-mXC"/>
+                <constraint firstAttribute="bottom" secondItem="eDF-Mb-V79" secondAttribute="bottom" id="a1H-57-LUV"/>
                 <constraint firstItem="oIv-Yo-q4Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dXq-M4-kTY"/>
+                <constraint firstItem="eDF-Mb-V79" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fXS-si-N4Y"/>
+                <constraint firstItem="TGC-ym-2TI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fmD-c6-aXW"/>
+                <constraint firstItem="eDF-Mb-V79" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="w8z-hU-RFG"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="287" y="139"/>
+            <point key="canvasLocation" x="51" y="102"/>
         </view>
     </objects>
+    <resources>
+        <image name="bg.png" width="320" height="480"/>
+    </resources>
 </document>

@@ -9,12 +9,13 @@
 #import "Chatview.h"
 
 @implementation Chatview
-
+@synthesize viewHeader,lblTitle,btnLeft,btnbackRight;
 + (id) newChatview
 {
     UINib *nib = [UINib nibWithNibName:@"Chatview" bundle:nil];
     NSArray *nibArray = [nib instantiateWithOwner:self options:nil];
     Chatview *obj = [nibArray objectAtIndex: 0];
+        
     return obj;
 }
 
