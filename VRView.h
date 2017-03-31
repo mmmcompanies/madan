@@ -8,12 +8,15 @@
 #import "DailyView.h"
 #import "Global.h"
 #import <UIKit/UIKit.h>
+
+
+#import "AppDelegate.h"
 @import AVFoundation;
 @import CoreAudio;
 @import CoreMedia;
 @import CoreAudioKit;
 
-@interface VRView : UIViewController<AVAudioRecorderDelegate, AVAudioPlayerDelegate,UITextFieldDelegate>
+@interface VRView : UIViewController<AVAudioRecorderDelegate, AVAudioPlayerDelegate,UITextFieldDelegate,NSURLSessionTaskDelegate>
 {
 AVAudioRecorder *recorder;
 AVAudioPlayer *myplayer;
@@ -32,11 +35,22 @@ AVAudioPlayer *myplayer;
     DailyView *SubView;
     int selectRedioButton;
      Global *global;
-    
+    bool myplayerStatus;
+    AFHTTPSessionManager *manager;
     UIAlertView *alertviewSave;
     UIAlertView *alertviewUpload;
     UIAlertView *alertviewPublic;
     
+    IBOutlet UILabel *lbl_sanskrit;
+    IBOutlet UILabel *lbl_hindi;
+    IBOutlet UIButton *btn_sanstrit;
+    IBOutlet UIButton *btn_hindi;
+    IBOutlet UIView *view_language;
+    
+    IBOutlet UIButton *btn_saveLanguage;
+    NSString *language;
+    NSString *songeTime;
+
     
     IBOutlet UIButton *btn_start;
     
